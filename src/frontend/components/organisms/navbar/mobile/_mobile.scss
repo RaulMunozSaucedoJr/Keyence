@@ -1,0 +1,61 @@
+@use '../../../../assets/scss/utilities/common/colors/colors' as color;
+@use '../../../../assets/scss/utilities/font_properties/font/fonts' as font;
+@use '../../../../assets/scss/utilities/font_properties/font_sizes/font_sizes'
+	as font_size;
+@use '../../../../assets/scss/utilities/widths_heigths/widths_hegiths' as
+	width_height;
+@use '../../../../assets/scss/utilities/margin/margin' as margin;
+@use '../../../../assets/scss/utilities/padding/paddings' as padding;
+@use '../../../../assets/scss/utilities/mixins/mixins' as *;
+
+#mobile-nav {
+	width: 100%;
+	height: 10.5%;
+	min-height: 10.5%;
+	max-height: 10.5%;
+	background-color: color.$Boundles_Blue;
+	border: color.$Inmersive_Blue_Black solid 0.2rem;
+
+	.dropdown-menu {
+		width: 20%;
+		height: auto;
+		margin-bottom: 40px;
+		background-color: color.$Inmersive_Blue_Black;
+		text-align: left;
+		border-radius: 1em;
+		padding: 2em;
+		margin: 2em;
+
+		a {
+			@include text(font.$Montserrat, font_size.$Small, color.$White);
+			text-align: center;
+			font-weight: bold;
+			letter-spacing: 0;
+			text-decoration: none;
+
+			&:hover,
+			&:active,
+			&:focus {
+				@include text(font.$Montserrat, font_size.$Small, color.$White);
+				text-align: center;
+				font-weight: bold;
+				letter-spacing: 0;
+				text-decoration: none;
+				outline: none;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	#mobile-nav {
+		display: none;
+	}
+}
+
+@media print {
+	#mobile-nav {
+		display: none;
+		visibility: hidden;
+	}
+}

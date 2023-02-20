@@ -1,0 +1,26 @@
+@use '../../utilities/common/colors/colors' as color;
+
+::placeholder {
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: 0;
+}
+::selection {
+	background-color: color.$Inmersive_Blue_Black;
+	color: color.$White;
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-track {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb:hover,
+	::-webkit-scrollbar-track {
+		display: none;
+	}
+}

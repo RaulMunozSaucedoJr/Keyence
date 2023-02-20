@@ -1,0 +1,5 @@
+export { default as Login } from '../../pages/public/login/Login'
+export { default as NotFound } from '../../pages/public/notFound/NotFound'
+export { default as RecoverPassword } from '../../pages/public/recoverPassword/RecoverPassword'
+export { default as SignUp } from '../../pages/public/signup/SignUp'
+export { default as Dashboard } from '../../pages/private/dashboard/Dashboard'

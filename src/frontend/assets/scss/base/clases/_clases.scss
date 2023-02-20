@@ -1,0 +1,12 @@
+@use '../../utilities/font_properties/font/fonts' as font;
+@use '../../utilities/font_properties/font_sizes/font_sizes' as font_size;
+@use '../../utilities/font_properties/properties/font_properties' as
+	font_properties;
+@use '../../utilities/common/colors/colors' as color;
+@use '../../utilities/widths_heigths/widths_hegiths' as width_height;
+@use '../../utilities/mixins/mixins' as *;
+
+.center {
+	display: grid;
+	place-content: center;
+}

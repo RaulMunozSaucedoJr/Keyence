@@ -1,0 +1,35 @@
+@use '../../../assets/scss/utilities/widths_heigths/widths_hegiths' as
+	width_height;
+@use '../../../assets/scss/utilities/padding/paddings' as padding;
+
+@use '../../../assets/scss/utilities/common/colors/colors' as color;
+
+@use '../../../assets/scss/utilities/font_properties/font/fonts' as font;
+@use '../../../assets/scss/utilities/font_properties/font_sizes/font_sizes' as
+	font_size;
+@use '../../../assets/scss/utilities/font_properties/properties/font_properties'
+	as font_properties;
+
+@use '../../../assets/scss/utilities/mixins/mixins' as *;
+
+.footer {
+	@include width_height(width_height.$vw100, width_height.$hauto);
+	background-color: color.$Empowered_Yellow;
+	z-index: 2;
+
+	h1 {
+		@include text(
+			font.$Montserrat,
+			font_size.$General,
+			color.$Inmersive_Blue_Black
+		);
+		text-align: center;
+		text-decoration: none;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.footer {
+			display: none;
+		}
+	}
+}

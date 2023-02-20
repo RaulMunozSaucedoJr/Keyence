@@ -1,0 +1,36 @@
+/*
+* * This are the stylesheet for reset the properties of our general stylesheet, pseudoselectors, tags, etc
+*/
+@use '../base/reset/reset';
+@use '../base/pseudoselectors/pseudoselectors';
+@use '../base/tags/tags';
+@use '../base/clases/clases';
+/*
+* * This are the stylesheets for atoms like: input, button, textarea, etc.
+*/
+@use '../../../components/atoms/input/input';
+@use '../../../components/atoms/button/button';
+@use '../../../components/atoms/textarea/textArea';
+
+/*
+ * * This are the stylesheets for molecules like: alerts, etc
+*/
+@use '../../../components/molecules/alert/alert';
+
+/*
+* * This are the stylesheet for organisms like: Navbar, Mobile Navbar, Footer, Modal, Table, etc.
+*/
+@use '../../../components/organisms/card/card';
+@use '../../../components/organisms/navbar/navbar';
+@use '../../../components/organisms/navbar/mobile/mobile';
+@use '../../../components/organisms/footer/footer';
+@use '../../../components/organisms/modal/modal';
+
+/*
+* * This are the stylesheets for our different pages like: Login, Signup, Recover Password, NotFound, Dashboard, etc.
+*/
+@use '../../../components/pages/public/login/login';
+@use '../../../components/pages/public/signup/signup';
+@use '../../../components/pages/public/recoverPassword/recover';
+@use '../../../components/pages/public/notFound/notFound';
+@use '../../../components/pages/private/dashboard/dashboard';

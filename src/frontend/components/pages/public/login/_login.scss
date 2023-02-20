@@ -1,0 +1,95 @@
+@use '../../../../assets/scss/utilities/common/colors/colors' as color;
+
+@use '../../../../assets/scss/utilities/font_properties/font/fonts' as font;
+@use '../../../../assets/scss/utilities/font_properties/font_sizes/font_sizes'
+	as font_size;
+
+@use '../../../../assets/scss/utilities/widths_heigths/widths_hegiths' as
+	width_height;
+
+@use '../../../../assets/scss/utilities/margin/margin' as margin;
+@use '../../../../assets/scss/utilities/padding/paddings' as padding;
+
+@use '../../../../assets/scss/utilities/mixins/mixins' as *;
+
+.login-left {
+	@include width_height(width_height.$w50, width_height.$vh100);
+	background-color: color.$Boundles_Blue;
+	@include padding(padding.$Padding2);
+
+	h1 {
+		@include text(font.$Montserrat, font_size.$Large, color.$White);
+		text-align: center;
+		letter-spacing: 0;
+		font-weight: bold;
+	}
+
+	label {
+		@include text(font.$Montserrat, font_size.$General, color.$White);
+		text-align: center;
+		letter-spacing: 0;
+		font-weight: bold;
+	}
+
+	a {
+		@include text(font.$Montserrat, font_size.$Medium, color.$White);
+		text-align: center;
+		letter-spacing: 0;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	p {
+		@include text(font.$Montserrat, font_size.$Small, color.$White);
+		text-align: center;
+		letter-spacing: 0;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+
+.login-right {
+	@include width_height(width_height.$w50, width_height.$vh100);
+	background-image: url('/src/frontend/assets/images/jpg/Login.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media only screen and (max-width: 600px) {
+	.login-left {
+		@include width_height(width_height.$w100, width_height.$vh90);
+		overflow-y: hidden;
+
+		h1 {
+			@include text(font.$Montserrat, font_size.$General, color.$White);
+			text-align: center;
+			letter-spacing: 0;
+			font-weight: bold;
+		}
+
+		label {
+			@include text(font.$Montserrat, font_size.$Extra_Small, color.$White);
+			text-align: center;
+			letter-spacing: 0;
+			font-weight: bold;
+		}
+
+		a {
+			@include text(font.$Montserrat, font_size.$Small, color.$White);
+			text-align: center;
+			letter-spacing: 0;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		small {
+			@include text(font.$Montserrat, font_size.$Small, color.$White);
+			text-decoration: none;
+		}
+	}
+
+	.login-right {
+		display: none;
+	}
+}

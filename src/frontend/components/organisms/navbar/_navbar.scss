@@ -1,0 +1,49 @@
+@use '../../../assets/scss/utilities/common/colors/colors' as color;
+
+@use '../../../assets/scss/utilities/font_properties/font/fonts' as font;
+@use '../../../assets/scss/utilities/font_properties/font_sizes/font_sizes' as
+	font_size;
+@use '../../../assets/scss/utilities/font_properties/properties/font_properties'
+	as font_properties;
+
+@use '../../../assets/scss/utilities/widths_heigths/widths_hegiths' as
+	width_height;
+
+@use '../../../assets/scss/utilities/mixins/mixins' as *;
+
+.navbar {
+	@include width_height(width_height.$w100, width_height.$hauto);
+	background-color: color.$Inmersive_Blue_Black !important;
+
+	img {
+		width: 60px;
+		height: 60px;
+		object-fit: contain;
+		border-radius: 1em;
+	}
+
+	a {
+		@include text(font.$Montserrat, font_size.$Medium, color.$White);
+		text-decoration: none;
+
+		&:hover {
+			@include text(font.$Montserrat, font_size.$Medium, color.$White);
+			text-decoration: none;
+		}
+	}
+
+	.dropdown-menu {
+		width: 20vw;
+		height: auto;
+		padding: 1em;
+		background-color: color.$Inmersive_Blue_Black;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar-toggler,
+	.navbar-collapse {
+		display: none;
+	}
+}
